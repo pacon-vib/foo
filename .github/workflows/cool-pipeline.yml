@@ -9,17 +9,17 @@ on:
 jobs: 
  test: 
   runs-on: ubuntu-latest 
-    steps: 
-    - uses: actions/checkout@v3 
-    - name: Use Node.js 16.x 
-      uses: actions/setup-node@v3 
-      with: 
-      node-version: "16" 
-      cache: "npm" 
-    - name: Pretend to build
-      run: echo Pretending to build some kind of app...
-    - name: Push artifact foo.txt
-      uses: actions/upload-artifact@v3
-      with:
-        name: my-artifact
-        path: foo.txt
+  steps: 
+  - uses: actions/checkout@v3 
+  - name: Use Node.js 16.x 
+    uses: actions/setup-node@v3 
+    with: 
+    node-version: "16" 
+    cache: "npm" 
+  - name: Pretend to build
+    run: echo Pretending to build some kind of app...
+  - name: Push artifact foo.txt
+    uses: actions/upload-artifact@v3
+    with:
+      name: my-artifact
+      path: foo.txt
